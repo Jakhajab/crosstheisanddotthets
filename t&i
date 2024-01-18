@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #word1, #word2 {
+      font-size: 24px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+  </style>
+  <script>
+    function changeWords() {
+      var word1 = document.getElementById('word1');
+      var word2 = document.getElementById('word2');
+
+      // Replace words with new ones
+      word1.textContent = getNewWord('t');
+      word2.textContent = getNewWord('i');
+    }
+
+    function getNewWord(startingLetter) {
+      // You can implement a more complex logic to get words dynamically
+      // For simplicity, using static words here
+      if (startingLetter === 't') {
+        return 'NewTWord';
+      } else if (startingLetter === 'i') {
+        return 'NewIWord';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="word1" onclick="changeWords()">InitialTWord</div>
+  <div id="word2" onclick="changeWords()">InitialIWord</div>
+</body>
+</html>
